@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'cubits/user_cubit/user_condition_cubit.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => ColorsCubit()),
           BlocProvider(create: (context) => CounterCubit()),
           BlocProvider(create: (context) => UserCubit()),
+          BlocProvider(create: (context) => UserConditionCubit()),
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
